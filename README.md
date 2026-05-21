@@ -6,7 +6,7 @@ Simulations to assess power and feasibility for group-based trajectory modeling.
 
 <img width="600" height="450" alt="one_simulated_dataset" src="https://github.com/user-attachments/assets/8e05e92b-9068-4991-9a36-188e86c3d1ac" />
 
-Since standard power calculations for group-based trajectory modeling do not exist, we used Monte Carlo simulation methods to demonstrate that a projected sample size of 450 achieves adequate power ($\ge$80%) to estimate significant (ɑ=0.05) model parameters (trajectory slopes) when implementing the group-based trajectory approach.
+Since standard power calculations for group-based trajectory modeling do not exist, we used Monte Carlo simulation methods to demonstrate that a projected sample size of 450 achieves adequate power (80%+) to estimate significant (ɑ=0.05) model parameters (trajectory slopes) when implementing the group-based trajectory approach.
 
 <!-- ABOUT THE PROJECT -->
 ## Underlying assumptions and math
