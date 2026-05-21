@@ -4,7 +4,7 @@ Simulations to assess power and feasibility for group-based trajectory modeling.
 * The group-based trajectory model consists of three latent groups, with linear trajectories that are characterized as worsening (slope<0), stable (slope=0), and improving (slope>0).
 * Each individual is assumed to have data on the continuous outcome (standardized with mean 0, without loss of generality) collected at two time points (baseline, 1-year). Random intercepts are included to account for within-individual clustering.
 
-[traj_plot_for_sims.tiff](https://github.com/user-attachments/files/28080258/traj_plot_for_sims.tiff)
+![](traj_plot_for_sims.tiff)
 
 <!-- ABOUT THE PROJECT -->
 ## Underlying assumptions and math
