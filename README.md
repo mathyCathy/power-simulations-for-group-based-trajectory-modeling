@@ -19,7 +19,7 @@ Simulations to assess power and feasibility for group-based trajectory modeling.
 For one simulated dataset:
 * Assume N=450 subjects, the projected sample size.
 * Randomly assign each subject to one of three latent classes. Since we do not know ahead of time the distribution of the classes, we assumed classes are equally distributed here.
-* For each individual, draw a random effect from $N(0,\sigma_u^2)$ distribution.
+* For each individual, draw a random effect from $N(0,\sigma_u^2)$ distribution, where $\sigma_u^2$ is a function of the ICC and $\sigma_e^2$, which are specified.
 * Calculate the individual-specific outcome $Y_{ij,k}$ based on the model and random noise drawn from $N(0,\sigma_e^2)$
 * Fit the group-based trajectory model using `lcmm` package in R.
 * Save the slope estimates and p-values. (For these power calculations, we focus on the "worsening" or "improving" slopes. Since the "stable" trajectory is assumed to have slope 0, these calculations provide estimates of type I error.)
