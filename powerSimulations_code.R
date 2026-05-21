@@ -2,7 +2,14 @@ library(dplyr) # for data management
 library(lcmm) # for group-based trajectory modeling
 
 # Simulation based power for Aim 1 based on group-based trajectory modeling
+# The purpose is to demonstrate that the projected sample size of N=450
+# is sufficient to fit the group-based trajectory modeling with three groups and linear trajectories (slope>0, slope=0, slope<0)
+# and that the non-zero slopes can be estimated with good power (80%+) when the effect sizes are small.
+
+# Assume:
 # Each of N individuals has measurements at bl, 12m (2 time points)
+
+# For the outcome:
 # For Aim 1, we are looking at continuous muscle measures (mass, fat, frailty)
 # WLOG, we can just look at a standardized continuous outcome (SD = 1), will allow us to translate to effect size.
 
