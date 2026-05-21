@@ -15,10 +15,12 @@ Simulations to assess power and feasibility for group-based trajectory modeling.
 ## Simulation approach
 
 For one simulated dataset:
-* Randomize 96 patients to the 12 possible crossover patterns. 
-* Generate individual-specific random effects for the 96 individuals.
-* Based on the treatment data, individual-specific random effects and the GLMM model above, estimate the individual- and period-specific probability of outcome $E(Y_{ij})=P(Y_{ij}=1)$ and use these to determine the outcome $Y_{ij}$ (0 or 1) based on a Bernoulli distribution.
-* Fit the logistic random effects model to the simulated data.
+* Assume N=450 subjects, the projected sample size.
+* Randomly assign each subject to one of three latent classes. Since we do not know ahead of time the distribution of the classes, we assumed classes are equally distributed here.
+* For each individual, draw a random effect from $N(0,\sigma_u^2)$ distribution.
+* Calculate the individual-specific outcome $Y_{ij,k}$ based on the model and random noise drawn from $N(0,\sigma_e^2)$
+* Fit the group-based trajectory model using `lcmm` package in R.
+* Save the slope estimates and p-values. (For these power calculations, we focus on the "worsening" or "improving" slopes. Since the "stable" trajectory is assumed to have slope 0, these calculations provide estimates of type I error.)
 
 Do this $R$ times. 
-* Save treatment estimates, p-values, and estimated random effect variance to assess bias, power, and ICC, respectively. 
+* Estimate power for the two slope parameters; for each parameter, report the proportion of simulated data sets where the estimated slope had p-value<0.05 (i.e., rejected the null when the true slope was non-zero).
